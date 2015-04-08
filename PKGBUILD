@@ -1,5 +1,5 @@
 pkgname=diskmonitor
-pkgver=0.3
+pkgver=0.3.1
 pkgrel=1
 pkgdesc='KDE tools to monitor SMART devices and MDRaid health status'
 arch=('x86_64')
@@ -8,7 +8,7 @@ license=('GPLv2')
 depends=('ki18n' 'kiconthemes' 'qt5-base' 'udisks2')
 makedepends=('extra-cmake-modules')
 source=( "https://github.com/papylhomme/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('c1aef6d33572ce6246ed50e287323523')
+md5sums=('40c1e8b93d4ad6b5532584e3172ece2e')
 
 build () {
 	cd "${srcdir}/${pkgname}-${pkgver}"
