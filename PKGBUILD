@@ -10,15 +10,16 @@ makedepends=('extra-cmake-modules')
 source=( "https://github.com/papylhomme/${pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('40c1e8b93d4ad6b5532584e3172ece2e')
 
-build () {
-	cd "${srcdir}/${pkgname}-${pkgver}"
-	[ -e build ] || mkdir build
-	cd build
-	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-	make
+build() {
+    mkdir -p build
+    cd build
+            
+    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+    make
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}/build"
-	make DESTDIR="${pkgdir}" install
+    cd build
+    
+    make DESTDIR="${pkgdir}" install
 }
