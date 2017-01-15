@@ -1,6 +1,6 @@
 pkgname=diskmonitor
 pkgver=0.3.1
-pkgrel=-2
+pkgrel=2
 pkgdesc='KDE tools to monitor SMART devices and MDRaid health status'
 arch=('x86_64')
 url="https://github.com/papylhomme/diskmonitor"
